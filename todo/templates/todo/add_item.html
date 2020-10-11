@@ -10,20 +10,10 @@
 <body>
 <!--For loop fetching data in table , and if statement with condition to strike if item is done-->
 	<h1>Add a Todo Item</h1>
-    <form method="POST" action="add">
-        <div>
-            <p>
-                <label for="id_name">Name: </label>
-                <input type="text" id="id_name" name="item_name" />
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for="id_done">Name: </label>
-                <input type="checkbox" id="id_done" name="done" />
+    <form method="POST" action="add" >
+        {% csrf_token %}
+        {{ form.as_p }}
 
-            </p>
-        </div>
         <div>
         <p>
             <button type="submit">Add Item</button>
