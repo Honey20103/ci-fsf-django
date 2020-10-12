@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=<>, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+<!--For loop fetching data in table , and if statement with condition to strike if item is done-->
+	<h1>Edit a Todo Item</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <div>
+        <p>
+            <button type="submit">Update Item</button>
+        </p>
+        </div>
+    </form>
+	
+</body>
+
+</html>
